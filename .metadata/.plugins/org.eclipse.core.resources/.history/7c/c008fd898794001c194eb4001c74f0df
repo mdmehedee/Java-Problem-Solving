@@ -1,0 +1,72 @@
+package assignment4;
+
+public class Person {
+
+	 
+
+	 
+
+	 
+
+Person mother;
+Person father;
+Person[] siblings;
+Person spouse;
+
+public Person(Person mother, Person father) {
+this.mother = mother;
+this.father = father;
+siblings = new Person[]{};
+
+ 
+
+}
+
+se
+* Adjusts the length of the caller's sibling array and
+* adds the given Person.
+ay
+public void addSibling(Person toAdd) {
+if (toAdd.isSibling(this)) {
+Person[] updatedSiblings = new Person[siblings.lengthtil];
+int i
+
+ 
+
+for (; i<siblings.length+l; it+){
+updatedsiblings[i] = siblings{il;
+}
+
+updatedSiblings[i] = toAdd;
+siblings = updatedSiblings;
+}
+else {
+return;
+}
+}
+
+se
+* Checks whether the given Person shares a parent with the caller.
+ay
+private boolean isSibling(Person stranger) {
+if (this.mother == stranger.mother || this. father == stranger. father) {
+return true;
+}
+return false;
+
+}
+
+se
+* Checks whether a given Person is the caller's sibling
+* before adding them as a spouse.
+aL
+public void addSpouse (Person toMarry) {
+if (isSibling(toMarry)) {
+System.out.print("Don't.");
+}
+
+else {
+Spouse = toMarry
+
+}
+
